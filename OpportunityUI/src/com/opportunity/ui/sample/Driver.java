@@ -14,7 +14,7 @@ public class Driver {
 		/* You would want to start by instantiating an OpportunityUI object. This object is the whole UI. Pass your names
 		 * as a string parameter to the OpportunityUI constructor...
 		 */
-		OpportunityUI opportunityUI = new OpportunityUI("Katrina Michaela Delfin, and Shaun Cassidy Calagos");
+		OpportunityUI opportunityUI = new OpportunityUI("Nathalie Lim-Cheng, Lance Alcabasa and Ryan Dimaunahan");
 		
 		/* Next, add an instance of all the ClickActions you have created (subclasses of ClickAction). Do not forget to pass
 		 * the objects (buttons, cards, etc) that will trigger the ClickAction as a parameter to the constructor of your
@@ -32,7 +32,6 @@ public class Driver {
  		 *  You may also Ctrl+Click SampleClickAction to read a brief tutorial on how to make a ClickAction subclass.
 		 */
 		SampleClickAction sampleClickAction = new SampleClickAction(opportunityUI.getBtnEndTurn());
-		sampleClickAction.addTrigger(opportunityUI.getBtnMakePrimeInvestment()); 
 		opportunityUI.addClickAction(sampleClickAction);
 		
 		/* Next, we add game data to your ClickAction. Ctrl+Click the MyPlayer class to see how to make use of the

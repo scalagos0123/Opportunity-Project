@@ -52,11 +52,9 @@ public class SampleClickAction extends ClickAction {
 		 * then updates the Game Log. If you keep clicking the trigger of this ClickAction (the "End the Turn" button),
 		 * you will see the following effects occur.
 		 */
-//		this.getOpportunityUI().setCardImageOfInvestmentCard(1, 0, this.getOpportunityUI().getCurrentSelectedCard().getCurrentImage());
-//		this.getOpportunityUI().removeCardFromPlayerHand(1, this.getOpportunityUI().getCurrentSelectedCard());
+		this.getOpportunityUI().setCardImageOfInvestmentCard(1, 0, this.getOpportunityUI().getCurrentSelectedCard().getCurrentImage());
+		this.getOpportunityUI().removeCardFromPlayerHand(1, this.getOpportunityUI().getCurrentSelectedCard());
 		this.getOpportunityUI().appendTextToTextLog("A card has been moved from the hand to the investments slot!");
-		
-		this.getOpportunityUI().setMoneyOfPlayer(1, "30,000");
 		
 		/* This is a sample of how to use the getYourGameData method to link your classes to the OpportunityUI. These procedures
 		 * modify the number of cards in the player's deck and hand, reducing the former and increasing the latter. Notice

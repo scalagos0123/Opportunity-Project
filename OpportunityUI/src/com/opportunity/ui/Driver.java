@@ -34,6 +34,7 @@ public class Driver {
 		 */
 		SampleClickAction sampleClickAction = new SampleClickAction(opportunityUI.getBtnEndTurn());
 		ClickAction investOnOpportunity = new ClickAction(opportunityUI.getBtnInvestOnOpportunity());
+		SampleClickAction sample = new SampleClickAction(opportunityUI.getBtnPlayEvent());
 		opportunityUI.addClickAction(sampleClickAction);
 		opportunityUI.addClickAction(investOnOpportunity);
 		
@@ -44,6 +45,9 @@ public class Driver {
 		 */
 		MyPlayer player = new MyPlayer();
 		sampleClickAction.addGameData(player);
+		
+		Player p1 = new Player("Shaun");
+		Player p2 = new Player("Kat");
 		
 		/* Finally, call the start method of OpportunityUI. This will start the game itself, and will display the UI on the
 		 * screen. Check the OpportunityUI API for the other methods provided by the OpportunityUI class regarding UI display

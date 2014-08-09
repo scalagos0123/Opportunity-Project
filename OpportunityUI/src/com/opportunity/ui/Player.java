@@ -2,6 +2,8 @@ package com.opportunity.ui;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import com.opportunity.ui.interfaces.OpportunityUICompatible;
 /**
  * 
  * @author Shaun Calagos
@@ -9,7 +11,7 @@ import java.util.Scanner;
  *
  */
 
-public class Player {
+public class Player implements OpportunityUICompatible{
 	
     private String player;
     private int cardAtHand;

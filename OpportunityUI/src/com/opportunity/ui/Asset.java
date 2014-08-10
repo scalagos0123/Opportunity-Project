@@ -5,6 +5,16 @@ public class Asset extends Cards {
 	private int startingPrice;
 	private int priceGrowth;
 	
+	public Asset(String name, String type, int cost, 
+			int income, int startingPrice, int priceGrowth) {
+		
+		super(name, type, cost);
+		this.income = income;
+		this.startingPrice = startingPrice;
+		this.priceGrowth = priceGrowth;
+		
+	}
+	
 	public int getIncome() {
 		return income;
 	}

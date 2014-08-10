@@ -28,6 +28,7 @@ public class Player extends ClickAction implements OpportunityUICompatible{
      */
     
     public Player(String player) {
+    	super();
     	this.sc = new Scanner (System.in);
     	this.d = new Deck();
         this.player = player;

@@ -10,6 +10,12 @@ public class Cards extends Deck {
 	protected String type;
 	protected int cost;
 	
+	public Cards(String name, String type, int cost) {
+		this.name = name;
+		this.type = type;
+		this.cost = cost;
+	}
+	
 	public ArrayList<Event> getCardEvent() {
 		return cardEvent;
 	}

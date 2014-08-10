@@ -18,6 +18,7 @@ public class Player extends ClickAction implements OpportunityUICompatible{
     private int money;
     private Scanner sc;
     private Deck d;
+    private ArrayList<Deck> cardsAtHand;
     
     
     /**
@@ -34,6 +35,7 @@ public class Player extends ClickAction implements OpportunityUICompatible{
         this.money = 1000;
         this.cardAtHand = 0;
         this.d = new Deck();
+        this.cardsAtHand = new ArrayList<Deck>();
     }
     
     /**
@@ -89,24 +91,6 @@ public class Player extends ClickAction implements OpportunityUICompatible{
      * Method for computing the current money left if the player wants to draw a card.
      * There's a 10% chance of getting 2 cards in 1 turn.
      */
-    
-//    public void investOnOpportunity() {
-//        this.money = setMoney(getMoney() - 1000);
-//        int chance = (int) (Math.random()*100);
-//        int cardAtHand = this.cardAtHand;
-//        
-//        if (chance == 10) {
-//        	cardAtHand++;
-//            cardAtHand++;
-//            setCardAtHand(cardAtHand);
-//            chance = 0;
-//        } else {
-//            cardAtHand++;
-//            setCardAtHand(cardAtHand);
-//            chance = 0;
-//        }
-//        
-//    }
     
     public void investOnOpportunity() {
         this.money = this.money - 1000;
@@ -241,6 +225,9 @@ public class Player extends ClickAction implements OpportunityUICompatible{
 	@Override
 	public void mouseClicked() {
 		// TODO Auto-generated method stub
+		
+		
+		
 		
 	}
 }

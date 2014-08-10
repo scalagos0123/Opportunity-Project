@@ -12,4 +12,17 @@ public class Deck {
 	public int getDeckCount() {
 		return cards.size();
 	}
+	
+	public Cards getCardAtDeck() {
+		return cards.get(0);
+	}
+	
+	public Cards getCardAtDeck(int cardsNeeded) {
+		Cards card = null;
+		for (int i = 0; i < cardsNeeded; i++) {
+			card = cards.get(i);
+		}
+		
+		return card;
+	}
 }

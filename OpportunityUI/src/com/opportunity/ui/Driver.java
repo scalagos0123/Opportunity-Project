@@ -49,6 +49,7 @@ public class Driver {
 		Player p1 = new Player("Shaun");
 		Player p2 = new Player("Kat");
 		
+		sampleClickAction.addTrigger(opportunityUI.set);
 		
 		
 		/* Finally, call the start method of OpportunityUI. This will start the game itself, and will display the UI on the

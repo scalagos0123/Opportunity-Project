@@ -11,12 +11,14 @@ import com.opportunity.ui.interfaces.OpportunityUICompatible;
  *
  */
 
-public class Player implements OpportunityUICompatible{
+public class Player extends ClickAction implements OpportunityUICompatible{
 	
     private String player;
     private int cardAtHand;
     private int money;
     private Scanner sc;
+    private Deck d;
+    
     
     /**
      * sets up new Player Name, with starting money of $4000
@@ -27,9 +29,11 @@ public class Player implements OpportunityUICompatible{
     
     public Player(String player) {
     	this.sc = new Scanner (System.in);
+    	this.d = new Deck();
         this.player = player;
         this.money = 1000;
         this.cardAtHand = 0;
+        this.d = new Deck();
     }
     
     /**
@@ -229,4 +233,14 @@ public class Player implements OpportunityUICompatible{
     	setMoney(getMoney() + 3000);
     	return true;
     }
+    
+    public void playAnEvent() {
+    	
+    }
+
+	@Override
+	public void mouseClicked() {
+		// TODO Auto-generated method stub
+		
+	}
 }

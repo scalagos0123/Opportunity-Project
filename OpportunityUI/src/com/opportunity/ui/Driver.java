@@ -1,5 +1,7 @@
 package com.opportunity.ui;
 
+import java.util.ArrayList;
+
 import com.opportunity.ui.sample.MyPlayer;
 import com.opportunity.ui.sample.SampleClickAction;
 
@@ -49,13 +51,25 @@ public class Driver {
 		Player p1 = new Player("Shaun");
 		Player p2 = new Player("Kat");
 		
-		sampleClickAction.addTrigger(opportunityUI.set);
-		
+		investOnOpportunity.addGameData(p1);
+		investOnOpportunity.addGameData(p2);
 		
 		/* Finally, call the start method of OpportunityUI. This will start the game itself, and will display the UI on the
 		 * screen. Check the OpportunityUI API for the other methods provided by the OpportunityUI class regarding UI display
 		 * and termination.
 		 */
+		
+		// I put the .start() on the bottom after the adding of players, but I think you can put it here
+		// because you won't see the list on the UI.
+		
+		/* I'll just add an ArrayList of Players here to collect data.
+		 * I'll test out the disabling part, for privacy of the game :D
+		 */
+		
+		ArrayList<Player> players = new ArrayList<Player>();
+		players.add(p1);
+		players.add(p2);
+		
 		opportunityUI.start();
 		
 	}

@@ -4,17 +4,17 @@ public class Property extends Cards {
 	private int investmentCost;
 	private int primeInvestmentCost;
 	private int sellingPrice;
-	private int level[];
+	private int cardLevel;
 	
 	public Property(String name, String type, int cost, 
-			int investmentCost, int primeInvestmentCost, 
-			int sellingPrice, int level[]) {
+			int investmentCost, int income, int primeInvestmentCost, 
+			int sellingPrice, int cardLevel, int cardImage) {
 		
 		super(name,type,cost);
 		this.investmentCost = investmentCost;
 		this.primeInvestmentCost = primeInvestmentCost;
 		this.sellingPrice = sellingPrice;
-		this.level = level;
+		this.cardLevel = cardLevel;
 		
 	}
 
@@ -30,8 +30,8 @@ public class Property extends Cards {
 		return sellingPrice;
 	}
 
-	public int[] getLevel() {
-		return level;
+	public int getCardLevel() {
+		return cardLevel;
 	}
 
 	public void setInvestmentCost(int investmentCost) {
@@ -46,7 +46,7 @@ public class Property extends Cards {
 		this.sellingPrice = sellingPrice;
 	}
 
-	public void setLevel(int[] level) {
-		this.level = level;
+	public void setLevel(int cardLevel) {
+		this.cardLevel = cardLevel;
 	}
 }

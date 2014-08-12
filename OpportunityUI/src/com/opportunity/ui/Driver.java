@@ -35,24 +35,25 @@ public class Driver {
  		 *  You may also Ctrl+Click SampleClickAction to read a brief tutorial on how to make a ClickAction subclass.
 		 */
 		SampleClickAction sampleClickAction = new SampleClickAction(opportunityUI.getBtnEndTurn());
-		ClickAction investOnOpportunity = new ClickAction(opportunityUI.getBtnInvestOnOpportunity());
+		//ClickAction investOnOpportunity = new ClickAction(opportunityUI.getBtnInvestOnOpportunity());
 		SampleClickAction sample = new SampleClickAction(opportunityUI.getBtnPlayEvent());
 		opportunityUI.addClickAction(sampleClickAction);
-		opportunityUI.addClickAction(investOnOpportunity);
+		//opportunityUI.addClickAction(investOnOpportunity);
 		
 		/* Next, we add game data to your ClickAction. Ctrl+Click the MyPlayer class to see how to make use of the
 		 * OpportunityUICompatible interface to make your classes compatible with the OpportunityUI. Note how the player
 		 * object is added to the sampleClickAction as gameData for that ClickAction. You can also do this before adding
 		 * the click action itself to the OpportunityUI via the addClickAction() method.
 		 */
+		
 		MyPlayer player = new MyPlayer();
 		sampleClickAction.addGameData(player);
 		
 		Player p1 = new Player("Shaun");
 		Player p2 = new Player("Kat");
 		
-		investOnOpportunity.addGameData(p1);
-		investOnOpportunity.addGameData(p2);
+		//investOnOpportunity.addGameData(p1);
+		//investOnOpportunity.addGameData(p2);
 		
 		/* Finally, call the start method of OpportunityUI. This will start the game itself, and will display the UI on the
 		 * screen. Check the OpportunityUI API for the other methods provided by the OpportunityUI class regarding UI display

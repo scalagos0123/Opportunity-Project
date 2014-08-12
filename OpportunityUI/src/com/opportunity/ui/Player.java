@@ -3,6 +3,8 @@ package com.opportunity.ui;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.swing.JComponent;
+
 import com.opportunity.ui.interfaces.OpportunityUICompatible;
 /**
  * 
@@ -11,13 +13,11 @@ import com.opportunity.ui.interfaces.OpportunityUICompatible;
  *
  */
 
-public class Player extends ClickAction implements OpportunityUICompatible{
+public class Player implements OpportunityUICompatible {
 	
     private String player;
     private int cardAtHand;
     private int money;
-    private Scanner sc;
-    private Deck d;
     
     
     /**
@@ -28,13 +28,11 @@ public class Player extends ClickAction implements OpportunityUICompatible{
      */
     
     public Player(String player) {
-    	super();
-    	this.sc = new Scanner (System.in);
-    	this.d = new Deck();
+    	Scanner sc = new Scanner (System.in);
+    	Deck deck = new Deck();
         this.player = player;
         this.money = 1000;
         this.cardAtHand = 0;
-        this.d = new Deck();
     }
     
     /**
@@ -86,10 +84,10 @@ public class Player extends ClickAction implements OpportunityUICompatible{
         return this.money = money;
     }
     
-    /**
-     * Method for computing the current money left if the player wants to draw a card.
-     * There's a 10% chance of getting 2 cards in 1 turn.
-     */
+//    /**
+//     * Method for computing the current money left if the player wants to draw a card.
+//     * There's a 10% chance of getting 2 cards in 1 turn.
+//     */
     
 //    public void investOnOpportunity() {
 //        this.money = setMoney(getMoney() - 1000);
@@ -109,48 +107,48 @@ public class Player extends ClickAction implements OpportunityUICompatible{
 //        
 //    }
     
-    public void investOnOpportunity() {
-        this.money = this.money - 1000;
-        double chance = Math.random();
-        
-        if (chance < 0.1) {
-        	this.cardAtHand = this.cardAtHand + 2;
-        } else {
-        	this.cardAtHand = this.cardAtHand + 1;
-        }
-        
-        chance = 0;
-        
-    }
+//    public void investOnOpportunity() {
+//        this.money = this.money - 1000;
+//        double chance = Math.random();
+//        
+//        if (chance < 0.1) {
+//        	this.cardAtHand = this.cardAtHand + 2;
+//        } else {
+//        	this.cardAtHand = this.cardAtHand + 1;
+//        }
+//        
+//        chance = 0;
+//        
+//    }
+//    
+//    public void instantOpportunity () {
+//    	this.money = this.money - 2000;
+//    	double chance = Math.random();
+//    	
+//    	if (chance < 0.1) {
+//    		this.cardAtHand = this.cardAtHand + 3;
+//    		
+//    	} else {
+//    		this.cardAtHand = this.cardAtHand + 2;
+//    	}
+//    	
+//		chance = 0;
+//    }
+//    
+//    public void alternativeOpportunity() {
+//    	this.cardAtHand = this.cardAtHand - 1;
+//    	double chance = Math.random();
+//    	
+//    	if (chance < 0.1) {
+//    		this.cardAtHand = this.cardAtHand + 2;
+//        } else {
+//        	this.cardAtHand = this.cardAtHand + 1;
+//        }
+//    	
+//        chance = 0;
+//    }
     
-    public void instantOpportunity () {
-    	this.money = this.money - 2000;
-    	double chance = Math.random();
-    	
-    	if (chance < 0.1) {
-    		this.cardAtHand = this.cardAtHand + 3;
-    		
-    	} else {
-    		this.cardAtHand = this.cardAtHand + 2;
-    	}
-    	
-		chance = 0;
-    }
-    
-    public void alternativeOpportunity() {
-    	this.cardAtHand = this.cardAtHand - 1;
-    	double chance = Math.random();
-    	
-    	if (chance < 0.1) {
-    		this.cardAtHand = this.cardAtHand + 2;
-        } else {
-        	this.cardAtHand = this.cardAtHand + 1;
-        }
-    	
-        chance = 0;
-    }
-    
-    public void playerTurn() {
+    /* public void playerTurn() {
     	String choice = "0";
     	while (!choice.equals("2")) {
     	
@@ -237,11 +235,5 @@ public class Player extends ClickAction implements OpportunityUICompatible{
     
     public void playAnEvent() {
     	
-    }
-
-	@Override
-	public void mouseClicked() {
-		// TODO Auto-generated method stub
-		
-	}
+    */
 }

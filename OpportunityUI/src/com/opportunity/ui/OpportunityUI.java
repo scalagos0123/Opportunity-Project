@@ -77,8 +77,6 @@ public class OpportunityUI {
 	 */
 	public void start() {
 		gameTable.setVisible(true);
-		for (int i = 0; i < 21; i++)
-			gameTable.getPlayer1Pane().addCardToHand(i);
 	}
 	
 	public BlowUpClickAction getBca() {

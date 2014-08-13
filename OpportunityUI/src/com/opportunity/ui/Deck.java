@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Deck {
-	private ArrayList<Cards> cards;
+	private ArrayList<Cards> deck;
 	
 	public Deck() {
-		cards = new ArrayList<Cards>();
+		deck = new ArrayList<Cards>();
 		
 		Event taxReturn = new Event("Get Tax Returns", "Event", 0, 
 				CardImageLoader.GET_TAX_RETURNS);
@@ -50,41 +50,48 @@ public class Deck {
 		Property saRissaL3 = new Property("Sa Rissa Restore Grocers Franchise", "Property", 700, 
 				100000, 200000, 50000, 700, 3, CardImageLoader.SA_RISSA_RESTORE_LVL3);
 		
+		Property ospyThallL0 = new Property("Ospy Thall Pharmacy Franchise", "Property", 2000,
+				0, 2100, 100000, 1500, 0, CardImageLoader.OSPY_THALL_LVL0);
+		
 		for (int i = 0; i < 4; i++) {
-			cards.add(taxReturn);
-			cards.add(birHunting);
-			cards.add(restoreBalance);
-			cards.add(vacantPropertyLot);
-			cards.add(stockInvestment);
-			cards.add(timeInvestmentAccount);
+			deck.add(taxReturn);
+			deck.add(birHunting);
+			deck.add(restoreBalance);
+			deck.add(vacantPropertyLot);
+			deck.add(stockInvestment);
+			deck.add(timeInvestmentAccount);
+			deck.add(karenL0);
+			deck.add(saRissaL0);
+			deck.add(mikkaL0);
+			deck.add(ospyThallL0);
 		}
 		
-		cards.add(karenL0);
-		cards.add(karenL1);
-		cards.add(karenL2);
-		cards.add(karenL3);
-		
-		cards.add(saRissaL0);
-		cards.add(saRissaL1);
-		cards.add(saRissaL2);
-		cards.add(saRissaL3);
-		
-		cards.add(mikkaL0);
-		cards.add(mikkaL1);
-		cards.add(mikkaL2);
-		cards.add(mikkaL3);
-		
+//		cards.add(karenL0);
+//		cards.add(karenL1);
+//		cards.add(karenL2);
+//		cards.add(karenL3);
+//		
+//		cards.add(saRissaL0);
+//		cards.add(saRissaL1);
+//		cards.add(saRissaL2);
+//		cards.add(saRissaL3);
+//		
+//		cards.add(mikkaL0);
+//		cards.add(mikkaL1);
+//		cards.add(mikkaL2);
+//		cards.add(mikkaL3);
+//		
 	}
 	
 	public int getDeckCount() {
-		return cards.size();
+		return deck.size();
 	}
 	
 	public Cards getCard() {
-		return cards.get(0);
+		return deck.get(0);
 	}
 	
 	public void shuffleDeck() {
-		Collections.shuffle(cards);
+		Collections.shuffle(deck);
 	}
 }

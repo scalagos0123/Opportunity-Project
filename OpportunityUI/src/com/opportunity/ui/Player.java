@@ -16,16 +16,18 @@ import com.opportunity.ui.interfaces.OpportunityUICompatible;
 public class Player implements OpportunityUICompatible {
 	
     private String player;
-    private int money;  
+    private int playerNum;
+    private int money;
     private ArrayList<Cards> cardsOnHand;
+    private Deck deck;
     
     
-    public Player(String player) {
-    	Scanner sc = new Scanner (System.in);
-    	Deck deck = new Deck();
+    public Player(String player, int playerNum) {
     	this.cardsOnHand = new ArrayList<Cards>();
         this.player = player;
         this.money = 10000;
+        this.deck = new Deck();
+        this.playerNum = playerNum;
     }
     
     public String getPlayer() {
@@ -43,6 +45,31 @@ public class Player implements OpportunityUICompatible {
     public int setMoney(int money) {
         return this.money = money;
     }
+    
+    public void getCardsOnHand(int index) {
+    	cardsOnHand.add(deck.getCard());
+    	
+    }
+    
+    public Cards removeCardOnHand(int cardToBeRemoved) {
+    	return cardsOnHand.remove(cardsOnHand.indexOf(cardToBeRemoved));
+    }
+
+	public int getPlayerNum() {
+		return playerNum;
+	}
+
+	public void setPlayerNum(int playerNum) {
+		this.playerNum = playerNum;
+	}
+	
+	public void getCardFromDeck() {
+		deck.getCard();
+	}
+	
+	public void getDeckSize() {
+		deck.getDeckCount();
+	}
     
 //    public void investOnOpportunity() {
 //        this.money = this.money - 1000;

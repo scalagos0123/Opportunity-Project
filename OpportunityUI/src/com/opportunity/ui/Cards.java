@@ -2,7 +2,7 @@ package com.opportunity.ui;
 
 import java.util.ArrayList;
 
-public class Cards extends Card {
+public class Cards {
 	protected ArrayList<Event> cardEvent;
 	protected ArrayList<Asset> cardAsset;
 	protected ArrayList<Property> cardProperty;

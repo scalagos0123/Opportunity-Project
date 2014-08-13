@@ -10,7 +10,6 @@ public class MakePropertyPrimeInvestment extends ClickAction {
 
 	public MakePropertyPrimeInvestment(JComponent source) {
 		super(source);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public MakePropertyPrimeInvestment(ArrayList<JComponent> sources) {
@@ -19,7 +18,7 @@ public class MakePropertyPrimeInvestment extends ClickAction {
 
 	@Override
 	public void mouseClicked() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	

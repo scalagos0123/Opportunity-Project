@@ -2,13 +2,14 @@ package com.opportunity.ui;
 
 import java.util.ArrayList;
 
-public class Cards extends Deck {
+public class Cards extends Card {
 	protected ArrayList<Event> cardEvent;
 	protected ArrayList<Asset> cardAsset;
 	protected ArrayList<Property> cardProperty;
 	protected String name;
 	protected String type;
 	protected int cost;
+	protected int card;
 	
 	public Cards(String name, String type, int cost) {
 		this.name = name;
@@ -50,6 +51,10 @@ public class Cards extends Deck {
 	
 	public void setCost(int cost) {
 		this.cost = cost;
+	}
+	
+	public int getCardImage() {
+		return card;
 	}
 	
 }	

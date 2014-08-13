@@ -71,7 +71,9 @@ public class Driver {
 		players.add(p1);
 		players.add(p2);
 		
+		
 		opportunityUI.start();
+		//opportunityUI.add
 		
 	}
 }

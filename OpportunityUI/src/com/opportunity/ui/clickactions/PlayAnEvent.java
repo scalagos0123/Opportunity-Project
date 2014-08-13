@@ -22,6 +22,8 @@ public class PlayAnEvent extends ClickAction {
 	public void mouseClicked() {
 		// TODO Auto-generated method stub
 		getOpportunityUI().getCardImageOfBlowUpCard();
+		//getOpportunityUI().
+	getOpportunityUI().rem	
 	}
-
+	
 }

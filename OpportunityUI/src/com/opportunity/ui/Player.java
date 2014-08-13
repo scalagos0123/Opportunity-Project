@@ -16,96 +16,33 @@ import com.opportunity.ui.interfaces.OpportunityUICompatible;
 public class Player implements OpportunityUICompatible {
 	
     private String player;
-    private int cardAtHand;
-    private int money;
+    private int money;  
+    private ArrayList<Cards> cardsOnHand;
     
-    
-    /**
-     * sets up new Player Name, with starting money of $4000
-     * @param player player name
-     * 
-     * 
-     */
     
     public Player(String player) {
     	Scanner sc = new Scanner (System.in);
     	Deck deck = new Deck();
+    	this.cardsOnHand = new ArrayList<Cards>();
         this.player = player;
-        this.money = 1000;
-        this.cardAtHand = 0;
+        this.money = 10000;
     }
-    
-    /**
-     * returns the player name.
-     * @return Player Name 
-     */
     
     public String getPlayer() {
         return player;
     }
-
-    public int getCardAtHand() {
-    	return cardAtHand;
-    }
-    /**
-     * returns the current money of the current player
-     * @return Current player money 
-     */
     
     public int getMoney() {
         return money;
     }
 
-    /**
-     * sets the Player name
-     * @param player Player name 
-     */
-    
     public void setPlayer(String player) {
         this.player = player;
     }
 
-    /**
-     * sets the cards at hand of player.
-     * @param cardAtHand Cards
-     */
-    
-    public void setCardAtHand(int cardAtHand) {
-        this.cardAtHand = cardAtHand;
-    }
-
-    /**
-     * sets the current money of player.
-     * @param money Money
-     * @return 
-     */
-    
     public int setMoney(int money) {
         return this.money = money;
     }
-    
-//    /**
-//     * Method for computing the current money left if the player wants to draw a card.
-//     * There's a 10% chance of getting 2 cards in 1 turn.
-//     */
-    
-//    public void investOnOpportunity() {
-//        this.money = setMoney(getMoney() - 1000);
-//        int chance = (int) (Math.random()*100);
-//        int cardAtHand = this.cardAtHand;
-//        
-//        if (chance == 10) {
-//        	cardAtHand++;
-//            cardAtHand++;
-//            setCardAtHand(cardAtHand);
-//            chance = 0;
-//        } else {
-//            cardAtHand++;
-//            setCardAtHand(cardAtHand);
-//            chance = 0;
-//        }
-//        
-//    }
     
 //    public void investOnOpportunity() {
 //        this.money = this.money - 1000;

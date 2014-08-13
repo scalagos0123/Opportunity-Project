@@ -15,6 +15,7 @@ public class Property extends Cards {
 		this.primeInvestmentCost = primeInvestmentCost;
 		this.sellingPrice = sellingPrice;
 		this.cardLevel = cardLevel;
+		this.card = cardImage;
 		
 	}
 

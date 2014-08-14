@@ -94,4 +94,8 @@ public class Deck {
 	public void shuffleDeck() {
 		Collections.shuffle(deck);
 	}
+	
+	public Cards getCardIncome(int cardImage) {
+		return deck.get(deck.indexOf(cardImage));
+	}
 }

@@ -17,7 +17,7 @@ public class Player implements OpportunityUICompatible {
 	
     private String player;
     private int playerNum;
-    private int money;
+    private double money;
     private ArrayList<Cards> cardsOnHand;
     private Deck deck;
     
@@ -34,7 +34,7 @@ public class Player implements OpportunityUICompatible {
         return player;
     }
     
-    public int getMoney() {
+    public double getMoney() {
         return money;
     }
 
@@ -42,7 +42,7 @@ public class Player implements OpportunityUICompatible {
         this.player = player;
     }
 
-    public int setMoney(int money) {
+    public double setMoney(double money) {
         return this.money = money;
     }
     
@@ -65,10 +65,11 @@ public class Player implements OpportunityUICompatible {
 	
 	public void getCardFromDeck() {
 		deck.getCard();
+		deck.getCard().
 	}
 	
-	public void getDeckSize() {
-		deck.getDeckCount();
+	public int getDeckSize() {
+		return deck.getDeckCount();
 	}
     
 //    public void investOnOpportunity() {

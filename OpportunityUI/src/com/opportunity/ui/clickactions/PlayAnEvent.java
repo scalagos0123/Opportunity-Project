@@ -24,9 +24,9 @@ public class PlayAnEvent extends ClickAction {
 		// TODO Auto-generated method stub
 		if (this.getYourGameData().get(0) instanceof Player) {
 			Player p1 = (Player) this.getYourGameData().get(0);
+			
 			if (getOpportunityUI().getCardImageOfBlowUpCard() == 0) {
-				getOpportunityUI().getCurrentSelectedCard();
-				getOpportunityUI().getInvestmentCardOfPlayer(p1.getPlayerNum(), );
+				getOpportunityUI().getInvestmentCardOfPlayer(p1.getPlayerNum() );
 				getOpportunityUI().setMoneyOfPlayer(p1.getPlayerNum(), );
 				this.getYourGameData().get(0);
 				

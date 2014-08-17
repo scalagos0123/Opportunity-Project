@@ -91,7 +91,7 @@ public class Deck {
 		return deck.get(0);
 	}
 	
-	public void shuffleDeck() {
+	public void shuffle() {
 		Collections.shuffle(deck);
 	}
 	

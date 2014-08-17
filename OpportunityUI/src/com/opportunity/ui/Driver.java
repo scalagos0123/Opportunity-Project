@@ -1,4 +1,6 @@
 package com.opportunity.ui;
+import java.io.ObjectInputStream.GetField;
+
 import com.opportunity.ui.clickactions.*;
 
 public class Driver {
@@ -31,9 +33,18 @@ public class Driver {
 		i.addGameData(p1);
 		i.addGameData(p2);
 		
+		p1.shuffleDeck();
+		p2.shuffleDeck();
+		
 		for (int index = 0; index < 3; index++) {
-			
+			opportunityUI.getGameTable().getPlayer1Pane().addCardToHand(p1.getCardFromDeck().getCardImage());
+			p1.removeCardFromDeck();
+			opportunityUI.getGameTable().getPlayer2Pane().addCardToHand(p2.getCardFromDeck().getCardImage());
+			p2.removeCardFromDeck();
 		}
+		
+		opportunityUI.setDeckCardCountOfPlayer(p1.getDeckSize(), 1);
+		opportunityUI.setDeckCardCountOfPlayer(p2.getDeckSize(), 2);
 		
 		opportunityUI.start();
 		

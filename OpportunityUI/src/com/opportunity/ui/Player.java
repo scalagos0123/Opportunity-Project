@@ -74,6 +74,10 @@ public class Player implements OpportunityUICompatible {
 	public void removeCardFromDeck() {
 		deck.removeCardOnDeck();
 	}
+	
+	public void shuffleDeck() {
+		deck.shuffle();
+	}
     
 //    public void investOnOpportunity() {
 //        this.money = this.money - 1000;

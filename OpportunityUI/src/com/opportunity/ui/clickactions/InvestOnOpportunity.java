@@ -17,7 +17,11 @@ public class InvestOnOpportunity extends ClickAction {
 	public void mouseClicked() {
 		// TODO Auto-generated method stub
 		
-		if (this.getYourGameData().get(0) instanceof Player) {
+		if (getOpportunityUI().getGameTable().getPlayer2Pane().isVisible() == false) {
+			
+		}
+		
+		if (this.getYourGameData().get(0) instanceof Player && !(this.getYourGameData().get(1) instanceof Player)) {
 			Player p1 = (Player) this.getYourGameData().get(0);
 			
 			double chance = Math.random();
@@ -28,7 +32,6 @@ public class InvestOnOpportunity extends ClickAction {
 		    	  p1.removeCardFromDeck();
 		    	  getOpportunityUI().setDeckCardCountOfPlayer(p1.getDeckSize(), p1.getPlayerNum());
 		    	  getOpportunityUI().setSpendingLimitOfPlayer(p1.getPlayerNum(), p1.getMoney() - 1000);
-		    	  
 		      } else {
 		    	  getOpportunityUI().getGameTable().getPlayer1Pane().addCardToHand(p1.getCardFromDeck().getCardImage());
 		    	  p1.removeCardFromDeck();

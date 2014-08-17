@@ -14,7 +14,10 @@ public class EndTurn extends ClickAction {
 
 	@Override
 	public void mouseClicked() {
-		
+		if (getOpportunityUI().getGameTable().getPlayer2Pane().isVisible() == false) {
+			getOpportunityUI().getGameTable().getPlayer1Pane().setVisible(false);
+			getOpportunityUI().getGameTable().getPlayer2Pane().setVisible(true);
+		}
 		
 	}
 }

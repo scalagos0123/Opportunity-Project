@@ -20,8 +20,8 @@ public class MakePropertyPrimeInvestment extends ClickAction {
 	public void mouseClicked() {
 		if (this.getYourGameData().get(0) instanceof Player) {
 			Player p1 = (Player) this.getYourGameData().get(0);
-			getOpportunityUI().setMoneyOfPlayer(p1.getPlayerNum(), p1.getMoney() - );
-			getOpportunityUI().setCardImageOfPrimeInvestmentCard(p1.getPlayerNum(), getOpportunityUI().getCurrentSelectedCard());
+			//getOpportunityUI().setMoneyOfPlayer(p1.getPlayerNum(), p1.getMoney() - );
+			//getOpportunityUI().setCardImageOfPrimeInvestmentCard(p1.getPlayerNum(), getOpportunityUI().getCurrentSelectedCard());
 		}
 	}
 }

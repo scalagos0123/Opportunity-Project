@@ -63,9 +63,8 @@ public class Player implements OpportunityUICompatible {
 		this.playerNum = playerNum;
 	}
 	
-	public void getCardFromDeck() {
-		deck.getCard();
-		deck.getCard().
+	public Cards getCardFromDeck() {
+		return deck.getCard();
 	}
 	
 	public int getDeckSize() {

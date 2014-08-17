@@ -35,6 +35,23 @@ public class InvestOnOpportunity extends ClickAction {
 		    	  getOpportunityUI().setDeckCardCountOfPlayer(p1.getDeckSize(), p1.getPlayerNum());
 		    	  getOpportunityUI().setSpendingLimitOfPlayer(p1.getPlayerNum(), p1.getMoney() - 1000);
 		      }
+		} else {
+			Player p2 = (Player) this.getYourGameData().get(1);
+			double chance = Math.random();
+		      if (chance < 0.1) {
+		    	  getOpportunityUI().getGameTable().getPlayer2Pane().addCardToHand(p2.getCardFromDeck().getCardImage());
+		    	  p2.removeCardFromDeck();
+		    	  getOpportunityUI().getGameTable().getPlayer2Pane().addCardToHand(p2.getCardFromDeck().getCardImage());
+		    	  p2.removeCardFromDeck();
+		    	  getOpportunityUI().setDeckCardCountOfPlayer(p2.getDeckSize(), p2.getPlayerNum());
+		    	  getOpportunityUI().setSpendingLimitOfPlayer(p2.getPlayerNum(), p2.getMoney() - 1000);
+		    	  
+		      } else {
+		    	  getOpportunityUI().getGameTable().getPlayer2Pane().addCardToHand(p2.getCardFromDeck().getCardImage());
+		    	  p2.removeCardFromDeck();
+		    	  getOpportunityUI().setDeckCardCountOfPlayer(p2.getDeckSize(), p2.getPlayerNum());
+		    	  getOpportunityUI().setSpendingLimitOfPlayer(p2.getPlayerNum(), p2.getMoney() - 1000);
+		      }
 		}
 	}
 }

@@ -16,24 +16,25 @@ public class InvestOnOpportunity extends ClickAction {
 	@Override
 	public void mouseClicked() {
 		// TODO Auto-generated method stub
-		Player p1 = (Player) this.getYourGameData().get(0);
-		getOpportunityUI().getGameTable().getPlayer1Pane().addCardToHand(p1.getCardFromDeck().getCardImage());
 		
 		if (this.getYourGameData().get(0) instanceof Player) {
-			//Player p1 = (Player) this.getYourGameData().get(0);
-			//getOpportunityUI().getGameTable().getPlayer1Pane().addCardToHand(p1.getCardFromDeck().getCardImage());
-			//getOpportunityUI().addCardToPlayerHand(p1.getPlayerNum(), p1.getCardFromDeck().getCardImage());
-//			getOpportunityUI().setSpendingLimitOfPlayer(p1.getPlayerNum(), p1.getMoney() - 1000);
-//			double chance = Math.random();
-//		      if (chance < 0.1) {
-//		    	  getOpportunityUI().addCardToPlayerHand(p1.getPlayerNum(), p1.getCardFromDeck());
-//		    	  p1.getCardFromDeck();
-//		    	  getOpportunityUI().setDeckCardCountOfPlayer(p1.getDeckSize(), p1.getPlayerNum());
-//		    	  
-//		      } 
-//		      
-//		      } else if (get)
-//		    	  
+			Player p1 = (Player) this.getYourGameData().get(0);
+			
+			double chance = Math.random();
+		      if (chance < 0.1) {
+		    	  getOpportunityUI().getGameTable().getPlayer1Pane().addCardToHand(p1.getCardFromDeck().getCardImage());
+		    	  p1.removeCardFromDeck();
+		    	  getOpportunityUI().getGameTable().getPlayer1Pane().addCardToHand(p1.getCardFromDeck().getCardImage());
+		    	  p1.removeCardFromDeck();
+		    	  getOpportunityUI().setDeckCardCountOfPlayer(p1.getDeckSize(), p1.getPlayerNum());
+		    	  getOpportunityUI().setSpendingLimitOfPlayer(p1.getPlayerNum(), p1.getMoney() - 1000);
+		    	  
+		      } else {
+		    	  getOpportunityUI().getGameTable().getPlayer1Pane().addCardToHand(p1.getCardFromDeck().getCardImage());
+		    	  p1.removeCardFromDeck();
+		    	  getOpportunityUI().setDeckCardCountOfPlayer(p1.getDeckSize(), p1.getPlayerNum());
+		    	  getOpportunityUI().setSpendingLimitOfPlayer(p1.getPlayerNum(), p1.getMoney() - 1000);
+		      }
 		}
 	}
 }

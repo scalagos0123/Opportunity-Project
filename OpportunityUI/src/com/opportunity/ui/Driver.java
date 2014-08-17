@@ -13,10 +13,14 @@ public class Driver {
 		MakePropertyPrimeInvestment m = new MakePropertyPrimeInvestment
 				(opportunityUI.getBtnMakePrimeInvestment());
 		EndTurn e = new EndTurn(opportunityUI.getBtnEndTurn());
+		InvestOnOpportunity i = new InvestOnOpportunity(opportunityUI.getBtnInvestOnOpportunity());
+		
+		
 		
 		opportunityUI.addClickAction(p);
 		opportunityUI.addClickAction(m);
 		opportunityUI.addClickAction(e);
+		opportunityUI.addClickAction(i);
 		
 		p.addGameData(p1);
 		p.addGameData(p2);
@@ -24,6 +28,12 @@ public class Driver {
 		m.addGameData(p2);
 		e.addGameData(p1);
 		e.addGameData(p2);
+		i.addGameData(p1);
+		i.addGameData(p2);
+		
+		for (int index = 0; index < 3; index++) {
+			
+		}
 		
 		opportunityUI.start();
 		

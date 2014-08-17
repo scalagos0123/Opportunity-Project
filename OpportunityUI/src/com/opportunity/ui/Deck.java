@@ -98,4 +98,8 @@ public class Deck {
 	public Cards getCardIncome(int cardImage) {
 		return deck.get(deck.indexOf(cardImage));
 	}
+	
+	public void removeCardOnDeck() {
+		deck.remove(0);
+	}
 }

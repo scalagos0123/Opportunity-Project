@@ -70,6 +70,10 @@ public class Player implements OpportunityUICompatible {
 	public int getDeckSize() {
 		return deck.getDeckCount();
 	}
+	
+	public void removeCardFromDeck() {
+		deck.removeCardOnDeck();
+	}
     
 //    public void investOnOpportunity() {
 //        this.money = this.money - 1000;

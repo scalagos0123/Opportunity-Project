@@ -18,8 +18,10 @@ public class Player implements OpportunityUICompatible {
     private String player;
     private int playerNum;
     private double money;
+    private double spendingLimit;
     private ArrayList<Cards> cardsOnHand;
     private Deck deck;
+    public static int TURN = 0;
     
     
     public Player(String player, int playerNum) {
@@ -28,6 +30,7 @@ public class Player implements OpportunityUICompatible {
         this.money = 10000;
         this.deck = new Deck();
         this.playerNum = playerNum;
+        this.spendingLimit = 0;
     }
     
     public String getPlayer() {
@@ -78,6 +81,26 @@ public class Player implements OpportunityUICompatible {
 	public void shuffleDeck() {
 		deck.shuffle();
 	}
+
+	public double getSpendingLimit() {
+		return spendingLimit;
+	}
+
+	public void setSpendingLimit(double spendingLimit) {
+		this.spendingLimit = spendingLimit;
+	}
+	
+//	public int getTurn() {
+//		return TURN;
+//	}
+//	
+//	public void setTurn(int playerTurnByNumber) {
+//		TURN = playerTurnByNumber;
+//	}
+//	
+//	public void incrementTurn() {
+//		TURN++;
+//	}
     
 //    public void investOnOpportunity() {
 //        this.money = this.money - 1000;

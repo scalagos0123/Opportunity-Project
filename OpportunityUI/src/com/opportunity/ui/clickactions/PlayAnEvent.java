@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import javax.swing.JComponent;
 
+import com.opportunity.ui.CardImageLoader;
 import com.opportunity.ui.ClickAction;
 import com.opportunity.ui.OpportunityUI;
 import com.opportunity.ui.Player;
@@ -22,13 +23,17 @@ public class PlayAnEvent extends ClickAction {
 	@Override
 	public void mouseClicked() {
 		// TODO Auto-generated method stub
+		Player p1 = (Player) this.getYourGameData().get(0);
+		Player p2 = (Player) this.getYourGameData().get(1);
+		
 		if (this.getYourGameData().get(0) instanceof Player) {
-			Player p1 = (Player) this.getYourGameData().get(0);
-			getOpportunityUI().getGameTable().getPlayer1Pane().addCardToHand(p1.getCardFromDeck().getCardImage());
-//			if (getOpportunityUI().getCardImageOfBlowUpCard() == 0) {
-//				getOpportunityUI().getInvestmentCardOfPlayer(p1.getPlayerNum() );
-//				getOpportunityUI().setMoneyOfPlayer(p1.getPlayerNum(), );
-//				this.getYourGameData().get(0);
+			if (getOpportunityUI().getCardImageOfBlowUpCard() == CardImageLoader.BIR_HUNTING_BEGINS) {
+				
+				System.out.println(getOpportunityUI().getInvestmentsOfPlayer(1));
+				
+				//getOpportunityUI().setMoneyOfPlayer(1, );
+			}
+			
 				
 			}
 		}

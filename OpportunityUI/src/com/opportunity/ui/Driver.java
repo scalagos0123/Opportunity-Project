@@ -4,20 +4,23 @@ import java.io.ObjectInputStream.GetField;
 import com.opportunity.ui.clickactions.*;
 
 public class Driver {
+	
+	private static Player p1;
+	private static Player p2;
+	private static OpportunityUI opportunityUI;
+	
 	public static void main(String[] args) {
-		OpportunityUI opportunityUI = new OpportunityUI("Katrina Michaela "
+		opportunityUI = new OpportunityUI("Katrina Michaela "
 				+ "Delfin and Shaun Cassidy Calagos");
 		
-		Player p1 = new Player("Shaun", 1);
-		Player p2 = new Player("Kat", 2);
+		p1 = new Player("Shaun", 1);
+		p2 = new Player("Kat", 2);
 		
 		PlayAnEvent p = new PlayAnEvent(opportunityUI.getBtnPlayEvent());
 		MakePropertyPrimeInvestment m = new MakePropertyPrimeInvestment
 				(opportunityUI.getBtnMakePrimeInvestment());
 		EndTurn e = new EndTurn(opportunityUI.getBtnEndTurn());
 		InvestOnOpportunity i = new InvestOnOpportunity(opportunityUI.getBtnInvestOnOpportunity());
-		
-		
 		
 		opportunityUI.addClickAction(p);
 		opportunityUI.addClickAction(m);
@@ -33,6 +36,11 @@ public class Driver {
 		i.addGameData(p1);
 		i.addGameData(p2);
 		
+		startGame();
+				
+	}
+	
+	public static void startGame() {
 		p1.shuffleDeck();
 		p2.shuffleDeck();
 		
@@ -43,10 +51,21 @@ public class Driver {
 			p2.removeCardFromDeck();
 		}
 		
+		p1.setSpendingLimit(10000);
+		p2.setSpendingLimit(10000);
+		
 		opportunityUI.setDeckCardCountOfPlayer(p1.getDeckSize(), 1);
 		opportunityUI.setDeckCardCountOfPlayer(p2.getDeckSize(), 2);
 		
-		opportunityUI.start();
+		opportunityUI.setMoneyOfPlayer(1, 10000);
+		opportunityUI.setMoneyOfPlayer(2, 10000);
 		
+		opportunityUI.setSpendingLimitOfPlayer(1, 10000);
+		opportunityUI.setSpendingLimitOfPlayer(2, 10000);
+		
+		opportunityUI.removeCardImageOfPrimeInvestmentCard(1);
+		
+		opportunityUI.start();
+
 	}
 }

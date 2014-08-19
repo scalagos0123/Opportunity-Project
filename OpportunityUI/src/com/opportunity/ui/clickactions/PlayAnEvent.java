@@ -26,16 +26,23 @@ public class PlayAnEvent extends ClickAction {
 		Player p1 = (Player) this.getYourGameData().get(0);
 		Player p2 = (Player) this.getYourGameData().get(1);
 		
-		if (this.getYourGameData().get(0) instanceof Player) {
+		if (Player.TURN == 0) {
 			if (getOpportunityUI().getCardImageOfBlowUpCard() == CardImageLoader.BIR_HUNTING_BEGINS) {
 				
-				System.out.println(getOpportunityUI().getInvestmentsOfPlayer(1));
+				double totalIncome = 0;
+				
+				for (int i = 6; i < 21; i++) { 
+					for (int j = 0; j < 5; j++) {
+				//if (getOpportunityUI().getInvestmentCardOfPlayer(1, j) == i) {
+					
+				}
 				
 				//getOpportunityUI().setMoneyOfPlayer(1, );
+					}
+				}
 			}
 			
 				
 			}
 		}
-	}
 	

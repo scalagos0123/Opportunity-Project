@@ -37,6 +37,21 @@ public class Driver {
 		i.addGameData(p2);
 		
 		startGame();
+		
+		if (opportunityUI.getCardImageOfBlowUpCard() < 3 && opportunityUI.getCardImageOfBlowUpCard() > -1) {
+			opportunityUI.setVisibleBtnPlayEvent(true);
+			opportunityUI.setVisibleBtnInvestOnOpportunity(true);
+			opportunityUI.setVisibleBtnEndTurn(true);
+		} else if (opportunityUI.getCardImageOfBlowUpCard() >= 3 && opportunityUI.getCardImageOfBlowUpCard() < 6) {
+			opportunityUI.setVisibleBtnPurchaseAssetOrProperty(true);
+			opportunityUI.setVisibleBtnSellPropertyOrAsset(true);
+			opportunityUI.setVisibleBtnInvestOnOpportunity(true);
+			opportunityUI.setVisibleBtnEndTurn(true);
+		} else {
+			opportunityUI.setVisibleBtnPurchaseAssetOrProperty(true);
+			opportunityUI.setVisibleBtnInvestOnOpportunity(true);
+			opportunityUI.setVisibleBtnEndTurn(true);
+		}
 				
 	}
 	
@@ -64,6 +79,14 @@ public class Driver {
 		opportunityUI.setSpendingLimitOfPlayer(2, 10000);
 		
 		opportunityUI.removeCardImageOfPrimeInvestmentCard(1);
+		
+		opportunityUI.setVisibleBtnEndTurn(false);
+		opportunityUI.setVisibleBtnInvestOnOpportunity(false);
+		opportunityUI.setVisibleBtnInvestOnProperty(false);
+		opportunityUI.setVisibleBtnMakePrimeInvestment(false);
+		opportunityUI.setVisibleBtnPlayEvent(false);
+		opportunityUI.setVisibleBtnPurchaseAssetOrProperty(false);
+		opportunityUI.setVisibleBtnSellPropertyOrAsset(false);
 		
 		opportunityUI.start();
 

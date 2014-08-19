@@ -18,9 +18,10 @@ public class PurchaseThisCard extends ClickAction {
 		Player p1 = (Player) this.getYourGameData().get(0);
 		Player p2 = (Player) this.getYourGameData().get(1);
 		
-		for (int i = 0; i < 5; i++) {
-			getOpportunityUI().getInvestmentCardOfPlayer(1, i);
+		if (Player.TURN == 0) {
+		//getOpportunityUI().setCardImageOfInvestmentCard(1, 1, 3);
+		getOpportunityUI().getInvestmentCardOfPlayer(1, 1).setImage(getOpportunityUI()
+				.getCardImageLoader().getLargeImageIconFor(getOpportunityUI().getCardImageOfBlowUpCard()));
 		}
 	}
-
 }

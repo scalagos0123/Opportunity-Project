@@ -2,10 +2,9 @@ package com.opportunity.ui;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import javax.swing.JComponent;
-
 import com.opportunity.ui.interfaces.OpportunityUICompatible;
+import com.opportunity.ui.*;
 /**
  * 
  * @author Shaun Calagos
@@ -20,12 +19,14 @@ public class Player implements OpportunityUICompatible {
     private double money;
     private double spendingLimit;
     private ArrayList<Cards> cardsOnHand;
+    private ArrayList<Card> investmentSlot;
     private Deck deck;
     public static int TURN = 0;
     
     
     public Player(String player, int playerNum) {
     	this.cardsOnHand = new ArrayList<Cards>();
+    	this.investmentSlot = new ArrayList<Card>();
         this.player = player;
         this.money = 10000;
         this.deck = new Deck();
@@ -89,6 +90,22 @@ public class Player implements OpportunityUICompatible {
 	public void setSpendingLimit(double spendingLimit) {
 		this.spendingLimit = spendingLimit;
 	}
+	
+	public void addToList(Card cardFromInvestment) {
+		investmentSlot.add(cardFromInvestment);
+	}
+	
+	public void getCardFromList(int index) {
+		investmentSlot.get(index);
+	}
+	
+//	public ArrayList<Card> getInvestmentSlot() {
+//		return investmentSlot;
+//	}
+//
+//	public void setInvestmentSlot(ArrayList<Card> investmentSlot) {
+//		this.investmentSlot = investmentSlot;
+//	}
 	
 //	public int getTurn() {
 //		return TURN;
